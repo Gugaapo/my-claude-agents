@@ -2,7 +2,7 @@
 # This script backs up your agents to the Git repository
 
 # Configuration
-$BackupDir = "$env:USERPROFILE\claude-agent-backups"
+$BackupDir = "$env:USERPROFILE\my-claude-agents"
 $GlobalAgentsDir = "$env:USERPROFILE\.claude\agents"
 $Timestamp = Get-Date -Format "yyyyMMdd_HHmmss"
 

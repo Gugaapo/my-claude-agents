@@ -10,7 +10,7 @@ Bash script for Linux and macOS systems.
 
 **Usage:**
 ```bash
-cd ~/claude-agent-backups
+cd ~/my-claude-agents
 ./scripts/backup-agents-linux.sh
 ```
 
@@ -27,7 +27,7 @@ Add to your crontab to run daily at 2 AM:
 crontab -e
 
 # Add this line:
-0 2 * * * /home/gustavo/claude-agent-backups/scripts/backup-agents-linux.sh >> /tmp/claude-agent-backup.log 2>&1
+0 2 * * * $HOME/my-claude-agents/scripts/backup-agents-linux.sh >> /tmp/claude-agent-backup.log 2>&1
 ```
 
 ### Windows: `backup-agents-windows.ps1`
@@ -36,7 +36,7 @@ PowerShell script for Windows systems.
 
 **Usage:**
 ```powershell
-cd $env:USERPROFILE\claude-agent-backups
+cd $env:USERPROFILE\my-claude-agents
 .\scripts\backup-agents-windows.ps1
 ```
 
@@ -56,7 +56,7 @@ Use Task Scheduler to run daily:
 4. Trigger: Daily at 2:00 AM
 5. Action: Start a program
    - Program: `powershell.exe`
-   - Arguments: `-ExecutionPolicy Bypass -File "C:\Users\<username>\claude-agent-backups\scripts\backup-agents-windows.ps1"`
+   - Arguments: `-ExecutionPolicy Bypass -File "C:\Users\<username>\my-claude-agents\scripts\backup-agents-windows.ps1"`
 6. Finish
 
 ## Customization
@@ -89,7 +89,7 @@ Both scripts have remote push commented out by default. To enable:
 
 1. Add a remote repository:
    ```bash
-   cd ~/claude-agent-backups  # or Windows equivalent
+   cd ~/my-claude-agents  # or Windows equivalent
    git remote add origin <your-repository-url>
    ```
 
@@ -126,7 +126,7 @@ If you prefer manual backups without using these scripts:
 
 **Linux/Mac:**
 ```bash
-cd ~/claude-agent-backups
+cd ~/my-claude-agents
 cp ~/.claude/agents/* global-agents/
 git add .
 git commit -m "Manual backup: $(date +%Y-%m-%d)"
@@ -135,7 +135,7 @@ git push origin main
 
 **Windows:**
 ```powershell
-cd $env:USERPROFILE\claude-agent-backups
+cd $env:USERPROFILE\my-claude-agents
 Copy-Item "$env:USERPROFILE\.claude\agents\*" "global-agents\" -Force
 git add .
 git commit -m "Manual backup: $(Get-Date -Format 'yyyy-MM-dd')"

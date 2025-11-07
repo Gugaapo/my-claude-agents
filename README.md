@@ -2,6 +2,8 @@
 
 This repository contains a backup of all custom Claude Code agents for easy portability across different machines and operating systems.
 
+**Repository:** https://github.com/Gugaapo/my-claude-agents.git
+
 ## Repository Structure
 
 ```
@@ -101,8 +103,8 @@ git push
 
 ### Restoring on New Machine
 ```bash
-git clone <repository-url>
-cd claude-agent-backups
+git clone https://github.com/Gugaapo/my-claude-agents.git
+cd my-claude-agents
 # Follow installation instructions above
 ```
 

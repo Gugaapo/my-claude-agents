@@ -26,8 +26,8 @@ Complete instructions for installing Claude Code custom agents across different 
 
 ```bash
 cd ~
-git clone <repository-url> claude-agent-backups
-cd claude-agent-backups
+git clone https://github.com/Gugaapo/my-claude-agents.git
+cd my-claude-agents
 ```
 
 ### Step 2: Install Global Agents
@@ -64,7 +64,7 @@ cd /path/to/your/project
 mkdir -p .claude/agents
 
 # Copy project agents (example: arandu-api)
-cp ~/claude-agent-backups/project-agents/arandu-api/* .claude/agents/
+cp ~/my-claude-agents/project-agents/arandu-api/* .claude/agents/
 
 # Set permissions
 chmod 755 .claude/agents
@@ -89,8 +89,8 @@ Open PowerShell:
 
 ```powershell
 cd $env:USERPROFILE
-git clone <repository-url> claude-agent-backups
-cd claude-agent-backups
+git clone https://github.com/Gugaapo/my-claude-agents.git
+cd my-claude-agents
 ```
 
 ### Step 2: Install Global Agents
@@ -126,7 +126,7 @@ cd C:\path\to\your\project
 New-Item -ItemType Directory -Force -Path ".claude\agents"
 
 # Copy project agents (example: arandu-api)
-Copy-Item -Path "$env:USERPROFILE\claude-agent-backups\project-agents\arandu-api\*" -Destination ".claude\agents\" -Recurse -Force
+Copy-Item -Path "$env:USERPROFILE\my-claude-agents\project-agents\arandu-api\*" -Destination ".claude\agents\" -Recurse -Force
 ```
 
 ### Step 5: Test Agent Discovery
@@ -223,7 +223,7 @@ chmod 644 ~/.claude/agents/*.md
 
 ```bash
 # Linux/Mac/Windows (Git Bash or PowerShell)
-cd ~/claude-agent-backups  # or %USERPROFILE%\claude-agent-backups on Windows
+cd ~/my-claude-agents  # or %USERPROFILE%\my-claude-agents on Windows
 git pull origin main
 
 # Re-run installation steps to update agents
@@ -235,7 +235,7 @@ If you modified agents locally:
 
 **Linux/Mac:**
 ```bash
-cd ~/claude-agent-backups
+cd ~/my-claude-agents
 cp ~/.claude/agents/* global-agents/
 git add .
 git commit -m "Update agents from local changes"
@@ -244,7 +244,7 @@ git push
 
 **Windows:**
 ```powershell
-cd $env:USERPROFILE\claude-agent-backups
+cd $env:USERPROFILE\my-claude-agents
 Copy-Item "$env:USERPROFILE\.claude\agents\*" "global-agents\" -Force
 git add .
 git commit -m "Update agents from local changes"
