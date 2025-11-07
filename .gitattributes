@@ -1,0 +1,23 @@
+# Line ending configuration for cross-platform compatibility
+
+# Force LF for markdown files (agent definitions)
+*.md text eol=lf
+
+# Force LF for shell scripts
+*.sh text eol=lf
+
+# Force CRLF for PowerShell scripts (Windows)
+*.ps1 text eol=crlf
+
+# Force LF for documentation
+*.txt text eol=lf
+README text eol=lf
+LICENSE text eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary

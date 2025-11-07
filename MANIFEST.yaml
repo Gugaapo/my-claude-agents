@@ -1,0 +1,154 @@
+---
+# Claude Code Agents Manifest
+# Last updated: 2025-11-07
+
+version: 1.0.0
+total_agents: 17
+active_agents: 15
+deprecated_agents: 2
+
+global_agents:
+  active:
+    - name: agent-manager
+      file: agent-manager.md
+      description: Intelligent task router for specialized agents
+      platforms: [linux, windows, macos]
+      size_kb: 33
+
+    - name: api-architect
+      file: api-architect.md
+      description: API design and architecture specialist
+      platforms: [linux, windows, macos]
+      size_kb: 47
+
+    - name: data-pipeline-architect
+      file: data-pipeline-architect.md
+      description: Data processing and pipeline design
+      platforms: [linux, windows, macos]
+      size_kb: 9
+
+    - name: dev-env-manager
+      file: dev-env-manager.md
+      description: Development environment setup and management
+      platforms: [linux, windows, macos]
+      size_kb: 8
+
+    - name: documentation-expert
+      file: documentation-expert.md
+      description: Documentation creation and maintenance
+      platforms: [linux, windows, macos]
+      size_kb: 9
+
+    - name: git-operations-expert
+      file: git-operations-expert.md
+      description: Complex Git operations and workflows
+      platforms: [linux, windows, macos]
+      size_kb: 10
+
+    - name: homelab-research-expert
+      file: homelab-research-expert.md
+      description: Homelab and self-hosting guidance
+      platforms: [linux, windows, macos]
+      size_kb: 7
+
+    - name: linux-sysadmin-expert
+      file: linux-sysadmin-expert.md
+      description: Linux system administration
+      platforms: [linux, macos]
+      size_kb: 9
+
+    - name: pc-hardware-advisor-br
+      file: pc-hardware-advisor-br.md
+      description: PC hardware advice for Brazilian market
+      platforms: [linux, windows, macos]
+      size_kb: 6
+
+    - name: performance-monitor
+      file: performance-monitor.md
+      description: Performance optimization and monitoring
+      platforms: [linux, windows, macos]
+      size_kb: 9
+
+    - name: prompt-architect
+      file: prompt-architect.md
+      description: AI prompt engineering and optimization
+      platforms: [linux, windows, macos]
+      size_kb: 10
+
+    - name: requirements-analyst
+      file: requirements-analyst.md
+      description: Requirements elicitation and documentation
+      platforms: [linux, windows, macos]
+      size_kb: 8
+
+    - name: research-assistant
+      file: research-assistant.md
+      description: Research and information gathering
+      platforms: [linux, windows, macos]
+      size_kb: 5
+
+    - name: security-auditor
+      file: security-auditor.md
+      description: Security auditing and vulnerability assessment
+      platforms: [linux, windows, macos]
+      size_kb: 8
+
+    - name: software-architect
+      file: software-architect.md
+      description: Software architecture and project design
+      platforms: [linux, windows, macos]
+      size_kb: 12
+
+  deprecated:
+    - name: expert-software-developer
+      file: expert-software-developer.md.deprecated
+      reason: Superseded by specialized agents
+      deprecated_date: 2025-11-07
+
+    - name: senior-backend-engineer
+      file: senior-backend-engineer.md.deprecated
+      reason: Superseded by specialized agents
+      deprecated_date: 2025-11-07
+
+project_agents:
+  arandu-api:
+    - name: project-engineer
+      description: Specialist in Arandu API codebase
+      platforms: [linux, windows, macos]
+
+    - name: agent-manager
+      description: Project-specific override of global agent-manager
+      platforms: [linux, windows, macos]
+      note: Overrides global agent-manager when in project context
+
+backup_info:
+  created: 2025-11-07
+  repository: claude-agent-backups
+  format: markdown
+  encoding: UTF-8
+  line_endings: LF (except .ps1 files which use CRLF)
+
+installation:
+  linux:
+    path: ~/.claude/agents/
+    permissions: "644 for files, 755 for directory"
+
+  windows:
+    path: "%USERPROFILE%\\.claude\\agents\\"
+    permissions: "default (no special requirements)"
+
+  macos:
+    path: ~/.claude/agents/
+    permissions: "644 for files, 755 for directory"
+
+compatibility:
+  claude_code_version: "latest"
+  tested_on:
+    - Debian 13 (Linux)
+    - Windows 10/11
+
+  expected_to_work:
+    - Ubuntu 20.04+
+    - Fedora
+    - Arch Linux
+    - macOS 12+
